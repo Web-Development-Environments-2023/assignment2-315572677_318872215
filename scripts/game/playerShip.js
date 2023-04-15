@@ -28,6 +28,8 @@ function selectShip(shipImage) {
 function setupPlyer(){
     playerPosition["x"]=Math.floor(Math.random() * canvas.width-playerShipSize["x"]);
     playerPosition["y"]=canvas.height-playerShipSize["y"]*2;
+    playerShipSize["x"] = canvas.width/35;
+    playerShipSize["y"] = canvas.width/35;
     playerStarShip.src = selectedShip;
     
 }

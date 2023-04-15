@@ -9,6 +9,9 @@ crosswise = false; // move the enemyShip crosswise
 function setupEnemyShips(){
     enemyStartShip.src = "images/enemyShip.png";
     enemyPosition = {x: 10, y: 40}
+    enemyShipSize["x"] = canvas.width/34;
+    enemyShipSize["y"] = canvas.width/34;
+
     activeEnemyShip = 20;
     for (let row = 0; row < 4; row++) {  // define all Enemy ships as active
         shipsStatus[row] = [1,1,1,1,1];
