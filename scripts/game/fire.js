@@ -11,6 +11,8 @@ enemyFires = [];
 enemyFiresLeft=[];
 let opacity = 1;
 lastHit = {"x":100,"y":80};
+enemyFireSize ={x: 10, y: 30}
+
 
 function setupFire(){ 
     playerFireImage.src = "images/firePlayer.png";
@@ -23,6 +25,9 @@ function setupFire(){
     enemyFiresRight=[];
     enemyFires = [];
     enemyFiresLeft=[];
+
+    enemyFireSize["x"] = canvas.width/100;
+    enemyFireSize["y"] = canvas.width/40;
 }
 
 function createEnemyFire(){
@@ -88,9 +93,9 @@ function drawFires(){
     drawFiresHelper(playerFires, playerFireImage, 30, 30, -15, 0)
     drawFiresHelper(playerFiresRight, playerFireImage, 30, 30, -15, 0)
     // Enemy
-    drawFiresHelper(enemyFiresLeft, enemyFireImage, 10, 30, 0, 0)
-    drawFiresHelper(enemyFires, enemyFireImage, 10, 30, 0, 0)
-    drawFiresHelper(enemyFiresRight, enemyFireImage, 10, 30, 0, 0)
+    drawFiresHelper(enemyFiresLeft, enemyFireImage,  enemyFireSize["x"],  enemyFireSize["y"], 0, 0)
+    drawFiresHelper(enemyFires, enemyFireImage,  enemyFireSize["x"], enemyFireSize["y"], 0, 0)
+    drawFiresHelper(enemyFiresRight, enemyFireImage,  enemyFireSize["x"], enemyFireSize["y"], 0, 0)
 }
 
 function drawFiresHelper(firesArray, image, width, height, offsetX, offsetY){
