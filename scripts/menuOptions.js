@@ -9,7 +9,7 @@ $(document).ready(function(){
 
     //////////////////////////////////////////////////////////////////
         /////////////////////////TOdo //////////////////////////////////
-        // $("#tempGameMenu").hide();
+        $("#tempGameMenu").hide();
 
         $("#tempGameMenu").click(function(){
             showLoginScreen();

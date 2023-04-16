@@ -102,12 +102,12 @@
 .button_Welcome::before{
   content: "";
   position: absolute;
-  width: 40px;
+  width: 255px;
   height: 400%;
   background: var(--clr);
   transition: 1s;
   animation: animate 2s linear infinite;
-  animation-delay: calc(0.33s * var(--i));
+  /* animation-delay: calc(0.33s * var(--i)); */
 }
 
 .button_Welcome:hover::before{
