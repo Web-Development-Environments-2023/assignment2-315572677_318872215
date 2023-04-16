@@ -1,0 +1,185 @@
+#bg-game-video {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  /* background-image: url('images/background.jpg') no-repeat center center fixed; */
+  background-size: cover;
+  
+
+}
+
+#gameContactScreen{
+    display: none;
+    position: relative;
+}
+
+#canvas {
+    position: relative; /* Set position to relative */
+    z-index: 9999; /* Set z-index to a high value */
+    border: 1px solid rgb(246, 0, 0); 
+    display: block;
+    margin: auto;
+    background-image: url('images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#gameInfo{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    z-index: 1;
+    color: red;
+    text-align: center;
+    font-size: 30px;
+}
+
+#scoreGame, #livesGame, #timeGame{
+    position: absolute;
+    top: 2%;
+    height: 3%;
+    z-index: 2;
+    font-size: 20px;
+}
+
+.gameOptional td{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    height: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 0px;
+}
+.gameOptional{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px; */
+}
+
+#startGame, #pauseGame, #resumeGame, #muteGame, #unmuteGame {
+  z-index: 9999;
+  background-color: #3498db;
+  color: rgb(255, 255, 255);
+  padding: 16px 32px 16px 32px;
+  text-align: center;
+  text-decoration: wavy;
+  display: block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 10px;
+  transition-duration: 0.4s;
+  left: 45%;
+  position: absolute;
+  cursor: pointer;
+  width: 200px; 
+  height: 50px; 
+  pointer-events: auto; 
+  font-weight: bold;
+  border-color:  rgba(126, 2, 241, 0.747);
+}
+
+#startGame{
+  top: 91%;
+  left: 65%;
+  background-color: cadetblue;
+}
+
+#pauseGame {
+  top: 91%;
+  left: 25%;
+}
+
+#resumeGame {
+  top: 91%;
+  left: 25%;
+  display: none;
+}
+
+#muteGame{
+  top: 91%;
+  left: 45%;
+}
+
+#unmuteGame{
+  top: 91%;
+  left: 45%;
+  display: none;
+}
+
+
+#volumeFader{
+    position: absolute;
+    top: 97%;
+    left: 45%;
+    width: 100px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    color: red;
+    text-align: center;
+    font-size: 30px;
+    width: 200px;
+}
+
+#timeGame{
+    top: 1.8%;
+    left: 85%;
+    font-size: 25px;
+}
+
+#scoreGame{
+    top: 1.7%;
+    left: 11%;
+    font-size: 25px;
+}
+#gameInfo p{
+  margin: 0;
+
+}
+
+
+#loginUsername{
+  position: relative;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  z-index: 1;
+  color: rgb(255, 166, 0);
+  text-align: left;
+  font-size: 20px;
+}
+
+@font-face {
+  font-family: 'Rocher';
+  src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+
+@font-palette-values --Mint {
+  font-family: Rocher;
+  base-palette: 7;
+}
+
+
+
+#endGameText{
+  font-size: 30px;
+  color: rgb(119, 182, 255);
+  text-align: center;
+  /* font-family: 'Press Start 2P', cursive; */
+  font-family: 'Rocher';
+  font-palette: --Mint;
+  display: flex;
+
+}

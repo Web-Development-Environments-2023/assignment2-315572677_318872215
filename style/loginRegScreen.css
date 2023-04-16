@@ -1,0 +1,158 @@
+#registerContentScreen{
+    display:none;
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    width: 400px;
+    padding: 50px;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(255, 213, 244);
+    border-radius: 10px;
+  }
+
+  #loginContentScreen{
+    display:none;
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    width: 400px;
+    padding: 50px;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.7);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(255, 213, 244, 0.7);
+    border-radius: 10px;
+  }
+
+.input-box{
+    position: relative;
+    width: 300px;
+    margin: 15px 2% 0 0;
+    padding: 2px;
+    display: inline-block;
+}
+
+.input-box label{
+    position: absolute;
+    top: 60%;
+    left: 5px;
+    transform: translateY(-80%);
+    font-size: 18px;
+    /* color: rgba(0, 0, 0, 0.603); */
+    padding: 0 5px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+label.error {
+    color: red;
+    font-size: 12px;
+    display: block;
+    /* margin-top: 5px; */
+    top: 100%;
+  }
+  
+
+.input-box label::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 5%;
+    height: 5px;
+    width: 5px;
+    background: transparent;
+    border-left: 1.8px solid rgb(4, 0, 255);
+    border-bottom: 1.8px solid rgb(4, 0, 255);
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: .5s;
+}
+
+.input-box label::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 5%;
+    height: 5px;
+    width: 5px;
+    background: transparent;
+    border-right: 1.8px solid rgb(4, 0, 255);
+    border-top: 1.8px solid rgb(4, 0, 255);
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: .5s;
+}
+
+.input-box input{
+    width: 100%;
+    padding: 5px;
+    background: #ffffff79;
+    /* opacity: 0.8; */
+    border: 1.8px solid rgba(0, 0, 0, 0.3);
+    outline: none;
+    border-radius: 10px;
+    background-color: transparent 20px;
+    font-size: 18px;
+    color: #000000;
+    transition: .5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label{
+    top: 2%;
+    left: 6%;
+    font-size: 16px;
+    background: transparent;
+    color: rgb(4, 0, 255);
+    padding: 0 12px;
+}
+
+.input-box input:focus ~ label::before,
+.input-box input:valid ~ label::before,
+.input-box input:focus ~ label::after,
+.input-box input:valid ~ label::after{
+    top: 2.5px;
+    opacity: 1;
+}
+
+.input-box input:focus,
+.input-box input:valid{
+    border: 1.8px solid rgba(255, 255, 255, .3);
+}
+
+#submit, #submit2{
+    color: rgb(255, 255, 255);
+    background-color: rgba(167, 167, 167, 0.842);
+    border: 1.8px solid rgba(126, 2, 241, 0.747);
+    padding: 5px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: .5s;
+}
+
+.btn-login{
+    color: rgb(240, 14, 14);
+    background-color: rgb(0, 0, 0);
+    border: 1.8px solid rgba(0, 0, 0, 0.3);
+    padding: 5px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: .5s;
+    width: 100%;
+    padding: 5px;
+    background: #17235779;
+    opacity: 0.3;
+    border: 1.8px solid rgba(0, 0, 0, 0.3);
+    outline: none;
+    border-radius: 10px;
+    background-color: transparent 20px;
+    font-size: 18px;
+    color: #ffffff;
+    transition: .5s;
+}

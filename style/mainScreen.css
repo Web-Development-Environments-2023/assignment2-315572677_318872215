@@ -1,0 +1,205 @@
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+  
+
+.header-style {
+    /* background-image: url(../images/background1.jpg); */
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; */
+    /* background-position: 100%; */
+    height: 80px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+  
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+  
+#logo {
+    height: 60px;
+}
+
+
+.menu {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 7777;
+    display: inline-block;
+  }
+  
+  .menu a {
+    color: #34ffea;
+    padding: 15px 20px;
+    font-size: 22px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: 0.5s;
+    overflow: hidden;
+    position: relative;
+    border-width: 1px;
+  }
+  
+  .menu a::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    background: rgb(142 255 240 /10%);
+  }
+  
+  .menu a:hover {
+    color: #002b9d;
+  }
+  
+  .menu a::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px solid transparent;
+    border-top-color: #34ffea;
+    border-bottom-color: #34ffea;
+    animation: rotate 3s linear infinite;
+  }
+  
+  .menu a:hover::after {
+    opacity: 1;
+  }
+  
+  .menu a:hover::after {
+    box-shadow: 0 0 10px #34ffea, 0 0 20px #34ffea, 0 0 40px #34ffea, 0 0 80px #34ffea;
+  }
+  
+  .menu a:hover::after {
+    animation: flicker 1s ease-out 2 alternate forwards;
+  }
+  
+  @keyframes flicker {
+    0% {
+      box-shadow: 0 0 10px #34ffea, 0 0 20px #34ffea, 0 0 40px #34ffea, 0 0 80px #34ffea;
+    }
+    50% {
+      box-shadow: none;
+    }
+    100% {
+      box-shadow: 0 0 10px #34ffea, 0 0 20px #34ffea, 0 0 40px #34ffea, 0 0 80px #34ffea;
+    }
+  }
+
+
+#aboutContentDialog{
+    z-index: 9999;
+    display:none;
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+    height: 80%;
+    background-color: #eeb8b8;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 5px 10px red;
+    filter: drop-shadow(0 0 20px #000000) drop-shadow(0 0 60px #00ffb3);
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 5px;
+}
+
+
+#closeAboutContentDialog {
+    position: absolute;
+    color: #000000;
+    top: 0;
+    right: 0;
+    font-size: 70px;
+    font-weight: bold;
+}
+    
+#closeAboutContentDialog:hover,
+#closeAboutContentDialog:focus {
+    color: #00a2ff;
+    text-decoration: none;
+    cursor: pointer;
+    }
+
+
+#gameOverDialog{
+    z-index: 8888;
+    display:none;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 60%;
+    background-color: #eeb8b8;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 5px 10px red;
+    filter: drop-shadow(0 0 20px #000000) drop-shadow(0 0 60px #00ffb3);
+}
+
+
+
+#NewGameGameOverDialog, #SettingsGameOverDialog {
+    background-color: #14aae6;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.3s ease-in-out;
+}
+  
+#NewGameGameOverDialog:hover, #SettingsGameOverDialog:hover {
+    background-color: #01d7f3;
+}
+  
+
+
+  footer{
+    color: rgb(199, 199, 199);
+    background-color: #000000;
+    text-align: center;
+    position: fixed;
+    left: 0%;
+    font-size: 18px;
+    padding-top: 3px ;
+    padding-bottom: 3px;
+    bottom: 0px;
+    width: 100%;
+    
+  }

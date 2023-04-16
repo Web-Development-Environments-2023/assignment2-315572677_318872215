@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPACESHIP WAR</title>
+    <link rel="icon" href="images/favicon.ico"/> <!-- Add icon to the website-->
+    
+    <!-- load all styles -->
+    <link rel="stylesheet" href="style/mainScreen.css">
+    <link rel="stylesheet" href="style/welcomeScreen.css">
+    <link rel="stylesheet" href="style/loginRegScreen.css">
+    <link rel="stylesheet" href="style/gameScreen.css">
+    <link rel="stylesheet" href="style/setting.css">
+
+
+    <!-- load all scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="scripts/register.js"></script>
+    <script type="text/javascript" src="scripts/loginScreen.js"></script>
+    <script type="text/javascript" src="scripts/aboutScreen.js"></script>
+    <script type="text/javascript" src="scripts/dataBase.js"></script>
+    <script type="text/javascript" src="scripts/menuOptions.js"></script>
+
+
+    <!-- game functionality -->
+    <script type="text/javascript" src="scripts/game/game.js"></script>
+    <script type="text/javascript" src="scripts/game/playerShip.js"></script>
+    <script type="text/javascript" src="scripts/game/enemyShip.js"></script>
+    <script type="text/javascript" src="scripts/game/fire.js"></script>
+    <script type="text/javascript" src="scripts/game/gameSetting.js"></script>
+    <script type="text/javascript" src="scripts/game/gameSound.js"></script>
+    <script type="text/javascript" src="scripts/game/gamePolicy.js"></script>
+
+    
+    <script type="text/javascript" src="scripts/dislpay/displayGame.js"></script>
+    <script type="text/javascript" src="scripts/dislpay/displayGameOver.js"></script>
+    <script type="text/javascript" src="scripts/dislpay/displayRegister.js"></script>
+    <script type="text/javascript" src="scripts/dislpay/displaySetting.js"></script>
+
+
+
+
+    <!-- load bootstrap
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+
+
+
+
+</head>
+<body>
+
+    <video autoplay muted loop id="bg-video">
+        <source src="images/BG.mp4" type="video/mp4">
+    </video>
+
+    <header class="header-style">
+        <div class="logo-container">
+          <!-- <img id="logo" src="/images/logo.png"> -->
+          <img id="logo" src="/images/logo1.png">
+          <h1 style="margin: 0; letter-spacing: 2px; text-transform: uppercase; color: rgba(126, 2, 241, 0.747); font-family: cursive">Spaceship War</h1>
+        </div>
+    </header>
+
+    <nav class="menu">
+        <a href="#" id="welcomeMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Welcome
+        </a>&emsp;&emsp;&emsp;
+        <a href="#" id="registerMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Register
+        </a>&emsp;&emsp;&emsp;
+        <a href="#" id="loginMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            &nbsp;&nbsp;&nbsp;Login&nbsp;&nbsp;&nbsp;
+        </a>&emsp;&emsp;&emsp;
+        <a href="#" id="aboutMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            &nbsp;&nbsp;&nbsp;About&nbsp;&nbsp;&nbsp;
+        </a>
+        <a href="#" id="settingMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Setting
+        </a>&emsp;&emsp;&emsp;
+        <a href="#" id="logoutMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Logout
+        </a>
+        <a href="#" id="tempGameMenu">tG</a> <!-- temp need to delete-->
+
+    </nav>
+
+    <div class="content">
+
+        <div id="welcomeContentScreen">
+            <p>🛸Welcome to speiceship game 🚀</p>
+            <button class="button_Welcome" id="registerButton" style="--clr:#ec95d2;--i:0;"><span>Register</span></button>
+            <button class="button_Welcome" id="loginButton" style="--clr:#95e995;--i:1;"><span>Login</span></button>
+        <!-- end welcomePage -->
+        </div>
+
+        <div id="registerContentScreen" class="form-box">
+            <h1>Register</h1>
+            <form id="registerForm" method="post">
+                <p class="success register-success"></p>
+                <div class="input-box">                       
+                    <input type="text" id="username" name="username" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="password" name="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="passwordconfirm" name="passwordconfirm" required>
+                    <label>Verify password</label>
+                </div>
+                <div class="input-box">
+                    <input type="text" id="firstname" name="firstname" required>
+                    <label>First Name</label>
+                </div>
+                <div class="input-box">
+                    <input type="text" id="lastname" name="lastname" required>
+                    <label>Last Name</label>
+                </div>
+                <div class="input-box">
+                    <input type="text" id="email" name="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <input type="date" name="birthDate" id="birthDate" required>
+                    <label for="birthDate">&emsp;&emsp;Birthday</label>
+                </div>
+                <div class="input-box">
+                    <button id="submit" type="submit" value="Register">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Register
+                    </button>
+                </div>
+            </form>
+        <!-- end of registerContentScreen -->
+        </div>
+
+        <div id="loginContentScreen" class="form-box">
+            <h1>Login</h1>
+            <form id="loginForm"  method="post">
+                <div class="input-box">
+                    <input type="text" id="username-login" name="username" required>
+                    <label for="username">Username</label>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="password-login" name="password" required>
+                    <label for="password">Password</label>
+                </div>
+                <div class="input-box">
+                    <!-- <input type="submit" value="Login" onclick="loginSubmit()"> -->
+                    <button id="submit2" type="submit" onclick="loginSubmit()">Login</button>
+
+                </div>
+            </form>
+        <!-- end of loginContentScreen -->
+        </div>
+
+        <dialog id="aboutContentDialog" >
+            <span id="closeAboutContentDialog" >&times;</span>	
+            <div class="modal-header">
+                <span><h2>Welcome to SPACESHIP WAR game</h2></span>
+            </div>
+            <div class="modal-text">
+                <p>
+                    <b><u>introduction</u></b><br>
+                    You are on an important mission and need to protect yourself from the evil spaceships.
+                    To win you must eliminate all the bad spaceships as fast as possible.
+                    Note that you are only allowed 3 disqualifications.<br><br>
+
+                    <b><u>Rules</u></b><br>
+                    &emsp;-	To move with the spaceship, use the arrow keys.<br>
+                    &emsp;-	to shoot press the spacebar.<br>
+                    &emsp;-	Note that the game time is 2 minutes, you can extend it through the settings screen.<br><br>
+
+                    <b><u>Additional functionality</u></b><br>
+                    &emsp;-	You can move with the mouse, and shoot with the left mouse button (see this option in thesettings)<br>
+                    &emsp;-	In addition, you can combine in the game a diagonal movement of all components, <br>&emsp;including your movement,
+                     the opponents, and even your shots! You can shoot to the sides <b>using the v and b keys. <br>&emsp;(The bonus function in the assignment)</b><br><br>
+
+                    Good luck!<br><br>
+
+                    <b><u>Plugins we used in this project:</u></b><br>
+                    &emsp;-	jQuery Validation Plugin<br><br>
+
+                    <b><u>Challenges in the project:</u></b><br>
+                    &emsp;-	Data verification at registration<br>
+                    &emsp;-	Creating an initial game loop<br>
+                    &emsp;-	Making a diagonal movement<br>
+
+                    <br><br>
+
+                    <center><b>Shay Giladi & Oran Becker</b></center>
+                </p>
+            </div>
+        </dialog>
+        <!-- end of aboutContentScreen -->
+
+        <div id="settingContactScreen">
+            <h1>Settings</h1>
+            <form id="settingForm" method="post">
+                <table class="arrow-table">
+                    <tr >
+                        <td ><label>Up Key</label></td>
+                        <td><input type="button" id="upKey" name="Up" required></td>
+                    </tr>
+                    <tr>
+                        <td><label>Right Key</label></td>
+                        <td><input type="button" id="rightKey" name="Right" required></td>             
+                    </tr>
+                    <tr>
+                        <td><label>Down Key</label></td>
+                        <td><input type="button" id="downKey" name="Down"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Left Key</label></td>
+                        <td><input type="button" id="leftKey" name="Left"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Fire Key</label></td>
+                        <td><input type="button" id="fireKey" name="fire"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Crosswise</label></td>
+                        <td><input type="checkbox" id="crosswise" name="crosswise" value="crosswise"></td>   
+                    </tr>
+                    <tr>
+                        <td><label>Mouse Option:</label></td>
+                        <td><input type="checkbox" id="mouseGame" name="mouseGame" value="mouseGame"></td>   
+                    </tr>
+                  </table>
+
+                  <table class="config-table" width =100% style="text-align: center;">
+                    <tr>
+                        <td><label>Duration</label></td>
+                        <td><input type="number" id="gameDuration" value="120" name="gameDuration" min="120"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td width =100%><label>Chose your fight ship</label></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td width=33%><img src="images/starShip.png" alt="starShip1" id="spaceShip1" name="spaceShip1" width="60" height="60" onclick="selectShip('images/starShip.png')"></td>
+                        <td width=33%><img src="images/starShip2.png" alt="starShip2" id="spaceShip2" name="spaceShip2" width="60" height="60" onclick="selectShip('images/starShip2.png')"></td>
+                        <td width=33%><img src="images/starShip3.png" alt="starShip3" id="spaceShip3" name="spaceShip3" width="60" height="60" onclick="selectShip('images/starShip3.png')"></td>
+                    </tr>
+ 
+                </table>
+
+                <div class="input-box">
+                    <button id="btn-settings" type="submit" onclick="saveSetting()">Start Game...</button>
+                </div>
+            </form>
+        <!-- end of settingContactScreen -->
+        </div>
+
+        <div id="gameContactScreen">
+            <!-- <div id="loginUsername"> </div> -->
+            <table id="gameInfo">
+                <tr>
+                    <td>
+                        <p>Score<span id="scoreGame"></span></p>
+                    </td>
+                    <td>
+                        <p>Lives           
+                            <img id="heart1" src="images\livesHeart.png" alt="heart" width="30" height="25">
+                            <img id="heart2" src="images\livesHeart.png" alt="heart" width="30" height="25">
+                            <img id="heart3" src="images\livesHeart.png" alt="heart" width="30" height="25">
+                        </p>
+                    </td>	
+                    <td>
+                        <p>Time remaining:<span id="timeGame"></span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6">
+                        <video autoplay muted loop id="bg-game-video">
+                            <source src="images/BGGame.mp4" type="video/mp4">
+                        </video>
+                        <canvas id="canvas" width="1050" height="500" onmousemove=moveParams() onmousedown=pressMouse()></canvas>
+                        <!-- <td> -->
+                        <div class="gameOptional">
+                            <input id="startGame" type="button" value="Start New Game" onclick="newGameDuringGame()">
+                            <input id="pauseGame" type="button" value="Pause Game" onclick="pauseGame()">
+                            <input id="resumeGame" type="button" value="Resume Game" onclick="resumeGame()">
+                            <input id="muteGame" type="button" value="Mute" onclick="muteGame()">
+                            <input id="unmuteGame" type="button" value="Unmute" onclick="unMuteGame()">
+                            <input type="range" id="volumeFader" name="volume" min="0" max="100" value="40" step="1" oninput="setUserVolume(this.value)">
+                        </div>
+                        <!-- </td> -->
+                    </td>
+                </tr>
+            </table>
+        <!-- end of gameContactScreen -->
+        </div>
+
+        <dialog id="gameOverDialog">
+            <div class="modal-header">
+                <!-- <h2>GAME OVER</h2><br> -->
+                <span id=endGameText></span>
+            </div>
+
+            <div class="gameOverCanvas">
+                <canvas id="canvas2" width="550" height="200"></canvas>
+
+            </div>
+            <div class="modal-text">
+                <button id="NewGameGameOverDialog"><b>New game</b></button>
+                <button id="SettingsGameOverDialog"><b>Settings</b></button>
+            </div>
+        </dialog>
+
+    <!-- end of content -->
+    </div>
+
+    <footer>
+        <span class="contact">Shay Giladi 315572677 &&  Oran Becker 318872215</span>
+    </footer>
+</body>
+</html>
