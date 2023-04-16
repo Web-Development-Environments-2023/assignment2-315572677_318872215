@@ -67,8 +67,8 @@ window.onload = () => {
 };
 
 function initialGame(){
-  canvas.width = screen.width*1
-  canvas.height = screen.height*0.60
+  canvas.width = screen.width*0.98
+  canvas.height = screen.height*0.58
   gamebackgroundImage = new Image();
   gamebackgroundImage.src = 'images/gameBackgroung.jpg';
 }
