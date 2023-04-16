@@ -49,21 +49,10 @@
     font-size: 20px;
 }
 
-.gameOptional td{
-    padding: 0px;
-    margin: 0px;
-    border: 0px;
-    height: 10px;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 0px;
-}
 .gameOptional{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* padding: 5px 0;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 10px; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
 }
 
 #startGame, #pauseGame, #resumeGame, #muteGame, #unmuteGame {
@@ -73,13 +62,12 @@
   padding: 16px 32px 16px 32px;
   text-align: center;
   text-decoration: wavy;
-  display: block;
+  /* display: block; */
   font-size: 16px;
-  margin: 4px 2px;
+  margin: 8px 2px;
   border-radius: 10px;
   transition-duration: 0.4s;
-  left: 45%;
-  position: absolute;
+  /* position: relative; */
   cursor: pointer;
   width: 200px; 
   height: 50px; 
@@ -89,37 +77,34 @@
 }
 
 #startGame{
-  top: 91%;
+  position: relative;
   left: 65%;
   background-color: cadetblue;
 }
 
 #pauseGame {
-  top: 91%;
+  position: absolute;
   left: 25%;
 }
-
 #resumeGame {
-  top: 91%;
+  position: absolute;
   left: 25%;
   display: none;
 }
 
-#muteGame{
-  top: 91%;
+#muteGame,#unmuteGame{
+  position: absolute;
   left: 45%;
 }
-
 #unmuteGame{
-  top: 91%;
-  left: 45%;
+  position: absolute;
   display: none;
 }
 
 
 #volumeFader{
     position: absolute;
-    top: 97%;
+    top: 98%;
     left: 45%;
     width: 100px;
     height: 20px;

@@ -287,8 +287,11 @@
         <!-- end of settingContactScreen -->
         </div>
 
-        <div id="gameContactScreen">
+<div id="gameContactScreen">
             <!-- <div id="loginUsername"> </div> -->
+            <video autoplay muted loop id="bg-game-video">
+                <source src="images/BGGame.mp4" type="video/mp4">
+            </video>
             <table id="gameInfo">
                 <tr>
                     <td>
@@ -306,12 +309,14 @@
                     </td>
                 </tr>
                 <tr>
+                    <td colspan="6">                  
+                            <canvas id="canvas" onmousemove=moveParams() onmousedown=pressMouse()></canvas>
+                    </td>
+                </tr>
+                <tr>
                     <td colspan="6">
-                        <video autoplay muted loop id="bg-game-video">
-                            <source src="images/BGGame.mp4" type="video/mp4">
-                        </video>
-                        <canvas id="canvas" width="1050" height="500" onmousemove=moveParams() onmousedown=pressMouse()></canvas>
-                        <!-- <td> -->
+                        <!-- <h2>Settings</h2> -->
+
                         <div class="gameOptional">
                             <input id="startGame" type="button" value="Start New Game" onclick="newGameDuringGame()">
                             <input id="pauseGame" type="button" value="Pause Game" onclick="pauseGame()">
@@ -320,7 +325,6 @@
                             <input id="unmuteGame" type="button" value="Unmute" onclick="unMuteGame()">
                             <input type="range" id="volumeFader" name="volume" min="0" max="100" value="40" step="1" oninput="setUserVolume(this.value)">
                         </div>
-                        <!-- </td> -->
                     </td>
                 </tr>
             </table>
