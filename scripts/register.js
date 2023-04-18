@@ -30,11 +30,11 @@ $(document).ready(function(){
             },
             email: {
                 required: true,
-                email: true
+                emailValid: true
             },
             dateOfBirth: {
                 required: true,
-                date: true
+                dateValid: true
             },
         },
 
@@ -61,11 +61,11 @@ $(document).ready(function(){
             },
             email: {
                 required: "Email is missing",
-                email: "Email is not valid"
+                emailValid: "Email is not valid"
             },
             dateOfBirth: {
                 required: "birth date is missing",
-                date: "The date is worng"
+                dateValid: "The date is worng"
             }
         },
         errorPlacement: function (error, element) {
@@ -93,7 +93,25 @@ $.validator.addMethod("lettersOnly", function(value, element) {
     return this.optional(element) || /^[a-z ]+$/i.test(value);
 }, "Must contain only letters");
 
+$.validator.addMethod("emailValid", function(value, element) { 
+    return this.optional( element ) || /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test( value ); 
+  }, "Email is not valid");
+
 // check if we need to valid for currect year, for example we cant register in 1/1/2026
+$.validator.addMethod("dateValid", function (value, element) {
+    var birthDay = Date.parse(value);
+    var today = new Date();
+    var minDate = Date.parse("01/01/1980");  
+
+    if((birthDay <= today && birthDay >= minDate)) {  
+        return true;  
+    }  
+    return false;  
+ }, "Invalid date of birth");
+
+
+
+
 
 
 function registerSubmit(){

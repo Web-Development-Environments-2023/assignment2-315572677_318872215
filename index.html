@@ -152,8 +152,12 @@
                     <label>Email</label>
                 </div>
                 <div class="input-box">
-                    <input type="date" name="birthDate" id="birthDate" required>
+                    <input type="date" name="birthDate" id="birthDate" min="1980-01-01" required>
                     <label for="birthDate">&emsp;&emsp;Birthday</label>
+
+                    <script>
+                        document.getElementById("birthDate").max = new Date().toISOString().split('T')[0];
+                    </script>
                 </div>
                 <div class="input-box">
                     <button id="submit" type="submit" value="Register">
