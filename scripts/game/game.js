@@ -3,7 +3,7 @@ var canvas; // the canvas
 var ctx; // used for drawing on the canvas
 
 intervalTime = 1; 
-intervalTimeEnemyFire = 7500;
+intervalTimeEnemyFire = 1500;
 playerScore = 0;
 lifeLeft = 3;
 durationGame = 120;
