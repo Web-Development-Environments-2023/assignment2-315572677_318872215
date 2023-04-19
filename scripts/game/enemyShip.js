@@ -72,7 +72,7 @@ function drawEnemyShips(){
     enemyW = enemyShipSize["x"];
     enemyH = enemyShipSize["y"];
     for (let row = 0; row < 4; row++) { 
-        const enemyStartShipPerRow = [enemyStartShip, enemyStartShip2, enemyStartShip3, enemyStartShip4];
+        const enemyStartShipPerRow = [enemyStartShip4, enemyStartShip, enemyStartShip2, enemyStartShip3];
         for (let col = 0; col < 5; col++) {
             if(shipsStatus[row][col] == 1){
                 ctx.drawImage(enemyStartShipPerRow[row], enemyPosition.x+enemyW*col, enemyPosition.y+enemyH*row, enemyW, enemyH);
