@@ -56,7 +56,7 @@ function loginSubmit(){
         // userLogin = values["username"];
         userLogin = userLoginDisplay(values["username"], values["password"])
         console.log(userLogin);
-        
+        SetInitialFormValues();
         LoginToSettingDisplay();
     }
     else {

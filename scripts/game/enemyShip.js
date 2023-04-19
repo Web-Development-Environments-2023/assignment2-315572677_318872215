@@ -2,12 +2,18 @@ enemyPosition = {x: 10, y: 40}
 direction = 1; //move left or right
 shipsStatus = [4]; //[row]
 enemyStartShip = new Image();
+enemyStartShip2 = new Image();
+enemyStartShip3 = new Image();
+enemyStartShip4 = new Image();
 activeEnemyShip = 20;
 enemyShipSize ={x: 50, y: 50}
 crosswise = false; // move the enemyShip crosswise
 
 function setupEnemyShips(){
     enemyStartShip.src = "images/enemyShip.png";
+    enemyStartShip2.src = "images/enemyShip2.png";
+    enemyStartShip3.src = "images/enemyShip3.png";
+    enemyStartShip4.src = "images/enemyShip4.png";
     enemyPosition = {x: 10, y: 40}
     enemyShipSize["x"] = canvas.width/34;
     enemyShipSize["y"] = canvas.width/34;
@@ -66,9 +72,10 @@ function drawEnemyShips(){
     enemyW = enemyShipSize["x"];
     enemyH = enemyShipSize["y"];
     for (let row = 0; row < 4; row++) { 
+        const enemyStartShipPerRow = [enemyStartShip, enemyStartShip2, enemyStartShip3, enemyStartShip4];
         for (let col = 0; col < 5; col++) {
             if(shipsStatus[row][col] == 1){
-                ctx.drawImage(enemyStartShip, enemyPosition.x+enemyW*col, enemyPosition.y+enemyH*row, enemyW, enemyH);
+                ctx.drawImage(enemyStartShipPerRow[row], enemyPosition.x+enemyW*col, enemyPosition.y+enemyH*row, enemyW, enemyH);
             }
         }
     }

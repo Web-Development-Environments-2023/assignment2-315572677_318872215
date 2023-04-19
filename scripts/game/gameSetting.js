@@ -33,18 +33,20 @@ $(document).ready(function(){
         }
     });
 
-
-
 });
 
 
 function SetInitialFormValues(){
+    dict_keyboard = {"up": "ArrowUp","right": "ArrowRight","down": "ArrowDown", "left": "ArrowLeft", "fire": " ", "gameDuration": 120};
     $("#upKey").val(dict_keyboard["up"]);
     $("#rightKey").val(dict_keyboard["right"]);
     $("#downKey").val(dict_keyboard["down"]);
     $("#leftKey").val(dict_keyboard["left"]);
     $("#fireKey").val("spaceBar");
     $("#gameDuration").val(120);
+    document.getElementById('mouseGame').checked = false; // Uncheck
+    document.getElementById('crosswise').checked = false; // Uncheck
+
 }
 
 function updateDurationSetting(event){
