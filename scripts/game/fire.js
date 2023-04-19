@@ -93,7 +93,7 @@ function drawFires(){
     drawFiresHelper(playerFires, playerFireImage, 30, 30, -15, 0)
     drawFiresHelper(playerFiresRight, playerFireImage, 30, 30, -15, 0)
     // Enemy
-    drawFiresHelper(enemyFiresLeft, enemyFireImage,  enemyFireSize["x"],  enemyFireSize["y"], 0, 0)
+    drawFiresHelper(enemyFiresLeft, enemyFireImage,  enemyFireSize["x"],  enemyFireSize["y"], 0, 0) 
     drawFiresHelper(enemyFires, enemyFireImage,  enemyFireSize["x"], enemyFireSize["y"], 0, 0)
     drawFiresHelper(enemyFiresRight, enemyFireImage,  enemyFireSize["x"], enemyFireSize["y"], 0, 0)
 }

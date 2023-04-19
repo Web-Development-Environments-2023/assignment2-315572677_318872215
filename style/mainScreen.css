@@ -14,7 +14,7 @@
     background-size: cover;
     background-attachment: fixed; */
     /* background-position: 100%; */
-    height: 80px;
+    height: 20%;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -42,7 +42,7 @@
     display: inline-block;
   }
   
-  .menu a {
+  .menu a { 
     color: #34ffea;
     padding: 15px 20px;
     font-size: 22px;
