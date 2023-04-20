@@ -18,7 +18,7 @@ function gameOverDialogToNewGameDisplay(){
     $("#pauseGame").show();
     $("#resumeGame").show();
     $("#settingMenu").show();
-    openFullscreen();
+    // openFullscreen();
   }
 
 

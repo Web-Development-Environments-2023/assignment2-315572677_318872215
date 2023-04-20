@@ -28,7 +28,7 @@
 }
   
 #logo {
-    height: 60px;
+    height: 80px;
 }
 
 
@@ -44,7 +44,7 @@
   
   .menu a { 
     color: #34ffea;
-    padding: 15px 20px;
+    /* padding: 15px 0 20px 0; */
     font-size: 22px;
     text-decoration: none;
     letter-spacing: 2px;
