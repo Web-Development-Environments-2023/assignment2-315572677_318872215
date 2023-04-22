@@ -7,7 +7,7 @@
 
 This is the link for the Website: 
 
-Right now we dont have like because we dont have settings to do it...
+https://web-development-environments-2023.github.io/assignment2-315572677_318872215/
 
 
 
@@ -37,5 +37,4 @@ ID: 318872215
 
 ## Demo
 
-Insert gif or link to demo
-
+![Alt text](images\fromGame.png)
