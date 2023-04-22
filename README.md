@@ -37,4 +37,4 @@ ID: 318872215
 
 ## Demo
 
-![Alt text](images\fromGame.png)
+![Alt text](https://github.com/Web-Development-Environments-2023/assignment2-315572677_318872215/blob/main/images/fromGame.png)
